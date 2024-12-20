@@ -1,0 +1,25 @@
+name: "Oblaka 3D"
+picture: "assets/img/picture.jpg"
+bio: "3D Printing studio"
+meta:
+  lang: "en"
+  description: "3D printing studio Oblaka"
+  title: "Oblaka 3D"
+  author: "Oblaka 3D"
+  siteUrl: "https://oblaka3d.github.io"
+links:
+  - name: "Github"
+    url: "https://github.com/oblaka3d"
+  - name: "Telegram"
+    url: "https://t.me/oblaka3d"
+  - name: "Instagram"
+    url: "https://instagram.com/oblaka_3d"
+  # - name: "Магазин"
+  #   url: ""
+  # - name: "OZON"
+  #   url: ""
+
+  # - name: ""
+  #   url: ""
+theme: "custom"
+
