@@ -15,6 +15,14 @@
     <meta property="og:locale" content="en">
     <meta name="twitter:title" content="Oblaka 3D">
     <meta name="twitter:description" content="3D printing studio Oblaka">
+    <script src="https://www.espruino.com/js/uart.js"></script>
+    <script>
+        function getTemperature() {
+            UART.eval('E.getTemperature()', function(t) {
+                document.getElementById("result").innerHTML = t;
+            });
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -44,14 +52,13 @@
             <a class="link-item" href="https://docs.google.com/spreadsheets/d/1uaw4e5GOIojs754IB9Zk6cMgyAjc2cfumn-E2qBvigM/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
                 <p>Гугл таблица со всяким / Google table with different things</p>
             </a>
-            <button onclick="UART.write('LED1.set();\n');">LED On!</button>
-            <button onclick="UART.write('LED1.reset();\n');">LED Off!</button>
+            <button onclick="getTemperature()">Get Temperature</button>
+            <span id="result"></span>
         </section>
     </main>
     <footer>
         <small>&copy; <span class="year"></span> Oblaka 3D</small>
     </footer>
     <script src="assets/js/script.js"></script>
-    <script src="https://www.espruino.com/js/uart.js"></script>
 </body>
 </html>
